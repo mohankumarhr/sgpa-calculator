@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sgpa calculator</title>
+
+    <!-- ----google fonts------ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            background-color: #F266AB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .main-container {
+            flex-basis: 400px; 
+            margin: 15px;
+        }
+        h1{
+            text-align: center;
+            margin: 10px;
+        }
+        .container{
+            padding: 20px;
+            background-color: #A459D1;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px 10px 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button{
+            background-color: #2CD3E1;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition: transform 0.5s;
+        }
+        
+        button:hover{
+            transform: scale(1.1);
+        }
+        .calculator.active-calculator {
+            display: none;
+        }
+        .no-of-subjects.active-subjects{
+            display: none;
+        }
+        .result.active-result{
+            display: none;
+        }
+        h4{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-container">
+            <h1>SGPA Calculator</h1>
+        <div class="container">
+            <div class="no-of-subjects">
+                <h3>Enter number of subjects</h3>
+                <input type="number" name="subjects" id="subjects" class="subjects" placeholder="Enter no of subjects">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="calculator active-calculator">
+                <h3>Enter</h3>
+                <input type="number" name="marks" id="marks" class="marks" placeholder="Enter marks">
+                <input type="number" name="credits" id="credits" class="credits" placeholder="Enter credit">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="result active-result">
+                <h4 id="result-text">your</h4>
+                <button>Reset</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
